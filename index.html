@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- big thank u 2 ilai!!! http://ilai.link/ -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <title>dAtA fAce</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- <script src="p5.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+  <script src="faceRecognition.js"></script>
+
+
+</head>
+
+<body>
+<p>Your Facebook Face Recognition Data Face!</p>
+<div id="sketch-holder">
+</div>
+<!-- input boxes using form, for the user's face color values -->
+  <form name="colorValues"><br>
+      <label for="gValue">green</label> <!--labels the first input as green -->
+      <input type="float" id="gValue" name="gValue"><br><br> <!--creates the first input box, how can I make it a float? -->
+      <label for="yValue">yellow</label>
+      <input type="float" id="yValue" name="yValue"><br><br>
+      <label for="rValue">red</label>
+      <input type="float" id="rValue" name="rValue"><br><br>
+      <label for="exCount">example count</label>
+      <input type="number" id="exCount" name="exCount"><br><br>
+      <div class="myButton" onclick="formdata()">generate</div>
+  </form>
+
+<!-- "get" the input data: -->
+  <!-- bring the canvas positioning into html, use canvas.parent('sketch-holder'); in js -->
+
+
+  <br><p>Click generate and your face data will be interpreted </p>
+  <p>as an abstract portrait.</p>
+
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <p>How to get to your Facial Recognition data:<br><br>
+	https://www.facebook.com/ > Settings > Your Facebook Information > Download Your Information
+    </p>
+	<p>Select whatever you want from Date Range, Format and Media Quality
+    </p>
+  <p>Although it will help this portrait if your facial recognition data points are from "all time"
+    </p>
+  <p>Click Create File</p>
+	<p>Wait around for an hour or so, maybe listen to an ASMR explanation of the Linux Kernel
+    </p>
+	<p>Once you have your data, find the about_you folder and open the face_recognition file
+    </p>
+  <p>There will be four numbers in this file: threshold_green, threshold_yellow, threshold_red, and example_count
+  </p>
+  <p>I don't know what the threshold numbers are but the example count is based on the number of photos you are tagged in, the stock that has trained the FB AI to learn your face
+    </p>
+  <p>The raw_data should be a base64 encoding, we won't be using it for now</p>
+	<p>The number of circles in the portrait is based on your example_count and the randomized circle colors are based on a hard-coded value plus your color thresholds
+  </p>
+  <p>
+  The default portrait is based on my own personal data
+  </p>
+
+</body>
+</html>
